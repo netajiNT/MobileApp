@@ -20,6 +20,9 @@ class Sim implements Mobile{
 	public void sms() {
 		System.out.println("SMS THE SELECTED SIM");
 	}
+	public void game() {
+		System.out.println("Angury Bird");
+	}
 	}
 class Airtel implements Mobile{
 
@@ -57,14 +60,17 @@ class Test{
 		Mobile m;
 		m=new  Sim();
 		m.call();
+		((Sim)m).game();
+		System.out.println();
 		m=new Airtel();
 		m.call();
 		m.sms();
+		System.out.println();
 		m=new Idea();
 		m.call();
 		m.sms();
-		
-		
+		((Idea)m).mms();
+				
 	}
 }
 
